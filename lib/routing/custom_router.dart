@@ -47,11 +47,14 @@ class CustomRouter {
   }
 
   PageRoute _getPageRoute(Widget child, String routeName) {
-    return MaterialPageRoute(
-        builder: (context) => child,
-        settings: RouteSettings(
-          name: routeName,
-        ));
+    return PageRouteBuilder(
+      pageBuilder: (_, __, ___) => child,
+      transitionsBuilder: (_, a, __, c) => FadeTransition(opacity: a, child: c),
+      transitionDuration: const Duration(milliseconds: 400),
+      settings: RouteSettings(
+        name: routeName,
+      ),
+    );
   }
 
   ///there is no navigation stack for this app hence...
