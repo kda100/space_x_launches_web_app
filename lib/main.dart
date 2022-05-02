@@ -3,9 +3,11 @@ import 'package:provider/provider.dart';
 import 'package:spacex_web_project/pages/page_holder/page_holder.dart';
 import 'package:spacex_web_project/providers/navigation_provider.dart';
 import 'package:spacex_web_project/providers/upcoming_launches_provider.dart';
+import 'package:url_strategy/url_strategy.dart';
 import 'constants/titles.dart';
 
 void main() {
+  setPathUrlStrategy();
   runApp(
     SpaceXLaunchesApp(),
   );
