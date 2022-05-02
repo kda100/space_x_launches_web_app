@@ -4,6 +4,8 @@ Please find in this repository the code for a web app using flutter that uses Sp
 
 Please note the app is not finished yet however the UI components and classes that have been created so far have been fully unit and widget tested.
 
+HOSTED ON: https://space-x-web-project.web.app/
+
 <p align="center">
 <img src = "https://user-images.githubusercontent.com/65980399/164695410-c3410844-f28e-4163-bf61-40fbd4899871.png"/> <img src = "https://user-images.githubusercontent.com/65980399/164695428-9791afcd-0813-4cf5-ae81-2d4a02023d74.png"/>
 
