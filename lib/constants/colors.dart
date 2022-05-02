@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const Color nextLaunchCountdownBackgroundLightColor = Colors.black;
+const Color nextLaunchCountdownBackgroundLightColor = Color(0xFF4ECDC4);
 const Color nextLaunchCountdownBackgroundDarkColor = Color(0xFF556370);
 const Color nextLaunchCountdownForegroundLightColor = Color(0xFF224344);
 const Color nextLaunchCountdownForegroundDarkColor = Color(0xFF253035);
