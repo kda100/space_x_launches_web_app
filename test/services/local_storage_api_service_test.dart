@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:spacex_web_project/services/local_storage_api_service.dart';
 
@@ -21,7 +22,10 @@ void main() {
       final List<String> ids =
           UpcomingLaunchesHelperFunctions.genMockFavouriteUpcomingLaunchIds();
       localStorageApiService.setFavouriteLaunchIds(ids);
-      expect(await localStorageApiService.getFavouriteLaunchIds(), ids);
+      expect(
+          listEquals(await localStorageApiService.getFavouriteLaunchIds(), ids),
+          true);
     });
   });
 }
+
