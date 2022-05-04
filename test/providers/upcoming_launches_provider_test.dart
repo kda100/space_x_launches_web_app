@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
@@ -153,8 +154,10 @@ void main() {
             upcomingLaunchesProvider.upcomingLaunches,
             upcomingLaunches,
           );
-          expect(upcomingLaunchesProvider.favouriteUpcomingLaunchesIds,
-              favouriteUpcomingLaunchIds);
+          expect(
+              listEquals(upcomingLaunchesProvider.favouriteUpcomingLaunchesIds,
+                  favouriteUpcomingLaunchIds),
+              true);
           expect(
             listenerNotified,
             true,
@@ -226,8 +229,13 @@ void main() {
 
       expect(upcomingLaunchesProvider.favouriteUpcomingLaunchesIds.length,
           numUpcomingLaunches);
-      expect(upcomingLaunchesProvider.favouriteUpcomingLaunchesIds,
-          upcomingLaunchesProvider.upcomingLaunches.map((e) => e.id).toList());
+      expect(
+          listEquals(
+              upcomingLaunchesProvider.favouriteUpcomingLaunchesIds,
+              upcomingLaunchesProvider.upcomingLaunches
+                  .map((e) => e.id)
+                  .toList()),
+          true);
       expect(setFavouriteLaunchIdsApiCall, true);
     });
 
