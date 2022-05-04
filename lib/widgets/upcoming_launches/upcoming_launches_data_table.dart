@@ -96,6 +96,7 @@ class UpcomingLaunchesDataTable extends StatelessWidget {
                               ]),
                               maxLines: 2,
                               overflow: TextOverflow.ellipsis,
+                              key: key,
                             );
                           }
                           return buildCustomText(upcomingLaunch.missionName,
