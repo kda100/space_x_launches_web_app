@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:spacex_web_project/providers/navigation_provider.dart';
 
+///handles widget navigation when the browser back button is pressed.
+
 class PagePopScope extends StatelessWidget {
   final Widget child;
   const PagePopScope({required this.child, Key? key}) : super(key: key);
