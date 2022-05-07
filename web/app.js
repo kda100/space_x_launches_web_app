@@ -1,3 +1,3 @@
-function navigateBack(message) {
+function navigateBack() {
     history.back();
 }
